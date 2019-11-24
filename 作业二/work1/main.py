@@ -4,7 +4,7 @@
 @Github: 
 @Date: 2019-11-22 16:44:33
 @LastEditors: fangn
-@LastEditTime: 2019-11-22 22:19:10
+@LastEditTime: 2019-11-24 15:05:10
 '''
 from os import listdir
 
@@ -28,4 +28,4 @@ elif (args.high):
     else:
         dataset.fft_highpass(int(args.rgb), int(args.r))
 else:
-    print("ERROR！你需要输入你要进行的操作 'low' or 'high' 的低通高通滤波器")
+    print("ERROR！你需要输入你要进行的操作：")

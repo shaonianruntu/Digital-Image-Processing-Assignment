@@ -4,7 +4,7 @@
 @Github: 
 @Date: 2019-11-22 19:17:58
 @LastEditors: fangn
-@LastEditTime: 2019-11-24 14:23:40
+@LastEditTime: 2019-11-24 15:06:08
 '''
 from os import listdir
 
@@ -34,7 +34,7 @@ elif (args.fangnan):
     else:
         dataset.fangnan(int(args.rgb), args.fdir)
 else:
-    print("ERROR！你需要输入你要进行的操作:")
+    print("ERROR！你需要输入你要进行的操作：")
     print("输入 '--rgb [0~5]' 选择你需要进行处理的图片（0表示选择全部）;")
     print(
         "输入 '--[lap, sobel, fangnan]' 选择你需要进行图片锐化操作的算子【Laplacian算子，Sobel算子，我的方楠算子】;"

@@ -4,7 +4,7 @@
 @Github: 
 @Date: 2019-11-22 16:44:33
 @LastEditors: fangn
-@LastEditTime: 2019-11-24 13:45:21
+@LastEditTime: 2019-11-24 15:05:37
 '''
 from os import listdir
 
@@ -28,6 +28,6 @@ elif (args.hsv):
     else:
         dataset.hsv_equalization(int(args.hsv))
 else:
-    print("ERROR！你需要输入你要进行的操作:")
+    print("ERROR！你需要输入你要进行的操作：")
     print("输入 '--rgb [0~5]' 选择你需要进行RGB直方图处理的图片（0表示选择全部）;")
     print("输入 '--hsv [0~5]' 选择你需要进行HSV直方图处理的图片（0表示选择全部）;")
