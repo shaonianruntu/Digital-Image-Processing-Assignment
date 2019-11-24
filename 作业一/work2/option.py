@@ -4,13 +4,13 @@
 @Github: 
 @Date: 2019-11-22 17:10:27
 @LastEditors: fangn
-@LastEditTime: 2019-11-22 20:08:38
+@LastEditTime: 2019-11-24 14:19:42
 '''
 import argparse
 
 parser = argparse.ArgumentParser(description="RGB和HSV图像的直方图均衡化处理")
 
-parser.add_argument('--rgb', default="0", help="选择你需要进行RGB直方图均衡化处理的图片(1~5)")
+parser.add_argument('--rgb', default="0", help="选择你需要进行处理的图片(1~5)")
 parser.add_argument('--noise', default="gaussian", help="选择你需要处理的噪声类型")
 parser.add_argument('--modal', default="mean", help="选择你需要删除噪声的滤波方式")
 parser.add_argument('--kernal_size', default="3", help="选择你需要删除噪声的滤波器的卷积核大小")
