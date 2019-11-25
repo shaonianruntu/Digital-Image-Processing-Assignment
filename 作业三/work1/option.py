@@ -4,13 +4,13 @@
 @Github: 
 @Date: 2019-11-22 17:10:27
 @LastEditors: fangn
-@LastEditTime: 2019-11-23 16:29:27
+@LastEditTime: 2019-11-25 09:53:05
 '''
 import argparse
 
-parser = argparse.ArgumentParser(description="RGB和HSV图像的直方图均衡化处理")
+parser = argparse.ArgumentParser(description="使用一阶和二阶检测算子（导数）进行图像的边缘检测")
 
-parser.add_argument('--rgb', default=0, help="选择你需要进行RGB直方图均衡化处理的图片(1~5)")
+parser.add_argument('--rgb', default=0, help="选择你需要进行处理的图片(0~5)")
 parser.add_argument(
     '--modal',
     default="sobel",

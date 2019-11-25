@@ -8,9 +8,9 @@
 '''
 import argparse
 
-parser = argparse.ArgumentParser(description="RGB和HSV图像的直方图均衡化处理")
+parser = argparse.ArgumentParser(description="Hough线检测")
 
-parser.add_argument('--rgb', default=0, help="选择你需要进行RGB直方图均衡化处理的图片(1~5)")
+parser.add_argument('--rgb', default=0, help="选择你需要进行处理的图片(0~5)")
 # parser.add_argument(
 #     '--modal',
 #     default="sobel",
