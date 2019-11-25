@@ -4,11 +4,11 @@
 @Github: 
 @Date: 2019-11-22 17:10:27
 @LastEditors: fangn
-@LastEditTime: 2019-11-24 14:19:42
+@LastEditTime: 2019-11-25 09:30:49
 '''
 import argparse
 
-parser = argparse.ArgumentParser(description="RGB和HSV图像的直方图均衡化处理")
+parser = argparse.ArgumentParser(description="彩色图像的去噪")
 
 parser.add_argument('--rgb', default="0", help="选择你需要进行处理的图片(1~5)")
 parser.add_argument('--noise', default="gaussian", help="选择你需要处理的噪声类型")

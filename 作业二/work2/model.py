@@ -4,7 +4,7 @@
 @Github: 
 @Date: 2019-11-22 09:40:18
 @LastEditors: fangn
-@LastEditTime: 2019-11-23 15:55:39
+@LastEditTime: 2019-11-25 09:19:17
 '''
 import numpy as np
 import matplotlib.pyplot as plt
@@ -71,7 +71,9 @@ class Dataset():
                                              g_magnitude_spectrum,
                                              r_magnitude_spectrum)
 
-                cv2.imwrite(str(*image_name) + " FD.png", magnitude_spectrum)
+                cv2.imwrite(
+                    str(*image_name) + " " + color.title() + " FD.png",
+                    magnitude_spectrum)
 
                 # 逆向傅里叶变换
                 r_fishift = np.fft.ifftshift(r_fshift)
@@ -88,7 +90,9 @@ class Dataset():
 
                 image_back = cv2.merge((b_i, g_i, r_i))
 
-                cv2.imwrite(str(*image_name) + " Back.png", image_back)
+                cv2.imwrite(
+                    str(*image_name) + " " + color.title() + " Back.png",
+                    image_back)
 
             elif (color == "gray"):
                 image = gray_loader(image_path)
@@ -100,7 +104,9 @@ class Dataset():
                 # 构建振幅图
                 magnitude_spectrum = 20 * np.log(np.abs(fshift) + 1) / 3
 
-                cv2.imwrite(str(*image_name) + " FD.png", magnitude_spectrum)
+                cv2.imwrite(
+                    str(*image_name) + " " + color.title() + " FD.png",
+                    magnitude_spectrum)
 
                 # 逆向傅里叶变换
                 fishift = np.fft.ifftshift(fshift)
@@ -108,4 +114,5 @@ class Dataset():
                 fi = np.fft.ifft2(fishift)
                 fi = np.abs(fi)
 
-                cv2.imwrite(str(*image_name) + " Back.png", fi)
+                cv2.imwrite(
+                    str(*image_name) + " " + color.title() + " Back.png", fi)

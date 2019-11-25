@@ -4,7 +4,7 @@
 @Github: 
 @Date: 2019-11-22 09:40:18
 @LastEditors: fangn
-@LastEditTime: 2019-11-23 16:06:18
+@LastEditTime: 2019-11-25 09:26:39
 '''
 import numpy as np
 import matplotlib.pyplot as plt
@@ -101,8 +101,12 @@ class Dataset():
                 image_dct = np.moveaxis(image_dct, 0, 2)
                 image_back = np.moveaxis(image_back, 0, 2)
 
-                cv2.imwrite(str(*image_name) + " DCT.png", image_dct)
-                cv2.imwrite(str(*image_name) + " IDCT.png", image_back)
+                cv2.imwrite(
+                    str(*image_name) + " " + color.title() + " DCT.png",
+                    image_dct)
+                cv2.imwrite(
+                    str(*image_name) + " " + color.title() + " IDCT.png",
+                    image_back)
 
             elif (color == "gray"):
 
@@ -144,5 +148,9 @@ class Dataset():
                 image_dct = np.vstack(f_patches)
                 image_back = np.vstack(fi_patches).astype(np.uint8)
 
-                cv2.imwrite(str(*image_name) + " DCT.png", image_dct)
-                cv2.imwrite(str(*image_name) + " IDCT.png", image_back)
+                cv2.imwrite(
+                    str(*image_name) + " " + color.title() + " DCT.png",
+                    image_dct)
+                cv2.imwrite(
+                    str(*image_name) + " " + color.title() + " IDCT.png",
+                    image_back)
