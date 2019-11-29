@@ -4,7 +4,7 @@
 @Github: 
 @Date: 2019-11-22 09:40:18
 @LastEditors: fangn
-@LastEditTime: 2019-11-22 22:15:17
+@LastEditTime: 2019-11-28 19:58:41
 '''
 import numpy as np
 import matplotlib.pyplot as plt
@@ -71,6 +71,8 @@ class Dataset():
             r_ffshift = r_fshift * mask
             g_ffshift = g_fshift * mask
             b_ffshift = b_fshift * mask
+
+            ffshift = cv2.add(r_ffshift, g_ffshift, b_ffshift)
 
             # 构建振幅图
             r_magnitude_spectrum = 20 * np.log(np.abs(r_ffshift) + 1) / 3
