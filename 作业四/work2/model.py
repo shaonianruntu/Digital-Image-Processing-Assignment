@@ -4,7 +4,7 @@
 @Github: 
 @Date: 2019-11-22 09:40:18
 @LastEditors: fangn
-@LastEditTime: 2019-12-12 21:44:40
+@LastEditTime: 2019-12-12 21:58:45
 '''
 import numpy as np
 from scipy import signal
@@ -202,6 +202,7 @@ class RLE:
 class JPEGEncode:
     """
     JPEG 格式压缩
+    参考链接：https://blog.csdn.net/yuyangyg/article/details/77968494
     """
     def __init__(self, path):
         self.path = path
@@ -314,7 +315,7 @@ class JPEGEncode:
 
             image_back = np.moveaxis(image_back, 0, 2)
 
-            # YCrCb 空间转换回 RGB 空间 
+            # YCrCb 空间转换回 RGB 空间
             image_back = cv2.cvtColor(image_back, cv2.COLOR_YCrCb2BGR)
 
             cv2.imwrite(
