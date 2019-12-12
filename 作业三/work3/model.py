@@ -4,7 +4,7 @@
 @Github: 
 @Date: 2019-11-22 09:40:18
 @LastEditors: fangn
-@LastEditTime: 2019-11-23 17:26:05
+@LastEditTime: 2019-12-02 16:41:58
 '''
 import numpy as np
 from scipy import signal
@@ -19,7 +19,7 @@ import re
 def is_image_file(file_name):
     return any(
         file_name.endswith(extension)
-        for extension in [".png", ".jpg", ".jpeg"])
+        for extension in [".png", ".jpg", ".jpeg", '.PNG', '.JPG', '.JPEG'])
 
 
 def default_loader(path):

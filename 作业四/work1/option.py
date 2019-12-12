@@ -4,7 +4,7 @@
 @Github: 
 @Date: 2019-11-22 17:10:27
 @LastEditors: fangn
-@LastEditTime: 2019-12-01 17:01:10
+@LastEditTime: 2019-12-01 19:10:17
 '''
 import argparse
 
@@ -14,6 +14,6 @@ parser.add_argument('--rgb', default=0, help="选择你需要进行处理的图�
 parser.add_argument(
     '--modal',
     default="rle",
-    help="选择你的压缩算法 'rle（行程编码）' , 'prewitt' , 'roberts' or 'laplacian'")
+    help="选择你的压缩算法 'rle（行程编码）' , 'huffman（霍夫曼编码）' , 'roberts' or 'laplacian'")
 
 args = parser.parse_args()

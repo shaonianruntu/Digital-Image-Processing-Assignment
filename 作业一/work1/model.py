@@ -4,7 +4,7 @@
 @Github: 
 @Date: 2019-11-22 09:40:18
 @LastEditors: fangn
-@LastEditTime: 2019-11-22 19:54:14
+@LastEditTime: 2019-12-02 16:41:01
 '''
 import numpy as np
 import matplotlib.pyplot as plt
@@ -18,7 +18,7 @@ import re
 def is_image_file(file_name):
     return any(
         file_name.endswith(extension)
-        for extension in [".png", ".jpg", ".jpeg"])
+        for extension in [".png", ".jpg", ".jpeg", '.PNG', '.JPG', '.JPEG'])
 
 
 def default_loader(path):

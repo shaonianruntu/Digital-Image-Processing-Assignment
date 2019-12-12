@@ -19,7 +19,7 @@ import re
 def is_image_file(file_name):
     return any(
         file_name.endswith(extension)
-        for extension in [".png", ".jpg", ".jpeg"])
+        for extension in [".png", ".jpg", ".jpeg", '.PNG', '.JPG', '.JPEG'])
 
 
 def default_loader(path):
